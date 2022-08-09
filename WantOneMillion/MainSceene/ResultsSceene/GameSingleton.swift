@@ -23,6 +23,7 @@ class Game {
         recordsCaretaker.save(records: self.records)
         }
     }
+    
     private(set) var session: GameSession?
     
     private init() {

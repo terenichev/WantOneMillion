@@ -23,7 +23,7 @@
 
 /* Begin PBXFileReference section */
 		D3FC54F3289CD8EC00169EDE /* WantOneMillion.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WantOneMillion.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		D3FC54F6289CD8EC00169EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D3FC54F6289CD8EC00169EDE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = WantOneMillion/Delegate/AppDelegate.swift; sourceTree = SOURCE_ROOT; };
 		D3FC54F8289CD8EC00169EDE /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		D3FC54FA289CD8EC00169EDE /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D3FC54FD289CD8EC00169EDE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -70,7 +70,6 @@
 			children = (
 				D3FC550A289CD8F700169EDE /* Delegate */,
 				D3FC550B289CD90B00169EDE /* MainSceene */,
-				D3FC54FC289CD8EC00169EDE /* Main.storyboard */,
 				D3FC54FF289CD8EE00169EDE /* Assets.xcassets */,
 				D3FC5501289CD8EE00169EDE /* LaunchScreen.storyboard */,
 				D3FC5504289CD8EE00169EDE /* Info.plist */,
@@ -90,8 +89,10 @@
 		D3FC550B289CD90B00169EDE /* MainSceene */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC54FC289CD8EC00169EDE /* Main.storyboard */,
 				D3FC5513289CDD3600169EDE /* ResultsSceene */,
 				D3FC550D289CDC6300169EDE /* GameSceene */,
+				D3FC551C28A2D8A100169EDE /* SettingsScene */,
 				D3FC54FA289CD8EC00169EDE /* MainViewController.swift */,
 			);
 			path = MainSceene;
@@ -123,6 +124,13 @@
 				D3FC551A28A22D7400169EDE /* RecordsCaretaker.swift */,
 			);
 			path = ResultsSceene;
+			sourceTree = "<group>";
+		};
+		D3FC551C28A2D8A100169EDE /* SettingsScene */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = SettingsScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

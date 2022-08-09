@@ -26,14 +26,14 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="S98-bD-i4M">
-                                <rect key="frame" x="117.5" y="423" width="179" height="60"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" hasAttributedTitle="YES" translatesAutoresizingMaskIntoConstraints="NO" id="S98-bD-i4M">
+                                <rect key="frame" x="117.5" y="403" width="179" height="100"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="D57-dY-bh7"/>
+                                    <constraint firstAttribute="height" constant="100" id="D57-dY-bh7"/>
                                     <constraint firstAttribute="width" constant="179" id="a8S-Ez-IOG"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" titleAlignment="center">
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <state key="normal" title="Button">
                                     <attributedString key="attributedTitle">
                                         <fragment content="Играть">
                                             <attributes>
@@ -42,13 +42,13 @@
                                             </attributes>
                                         </fragment>
                                     </attributedString>
-                                </buttonConfiguration>
+                                </state>
                                 <connections>
                                     <segue destination="AIT-E3-pE3" kind="presentation" identifier="Play" modalPresentationStyle="fullScreen" id="70P-nO-jAe"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="97E-y4-f0e">
-                                <rect key="frame" x="137" y="524" width="140" height="45"/>
+                                <rect key="frame" x="137" y="544" width="140" height="45"/>
                                 <constraints>
                                     <constraint firstAttribute="width" secondItem="97E-y4-f0e" secondAttribute="height" multiplier="28:9" id="B2M-ef-uet"/>
                                     <constraint firstAttribute="width" constant="140" id="yKh-QZ-RNU"/>
@@ -67,17 +67,31 @@
                                     <segue destination="iWy-tz-D6M" kind="presentation" modalPresentationStyle="fullScreen" id="pgr-xc-7De"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Aym-KZ-Hmh">
+                                <rect key="frame" x="111" y="801" width="192" height="35"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="192" id="Lu8-v6-zXb"/>
+                                    <constraint firstAttribute="height" constant="35" id="shx-aw-Ege"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Настройки"/>
+                                <connections>
+                                    <segue destination="yk3-7s-gcF" kind="presentation" modalPresentationStyle="fullScreen" id="uf5-VO-Hff"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="97E-y4-f0e" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="1hz-AU-a42"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cb9-hz-Hfn" secondAttribute="trailing" constant="83" id="1sw-Nx-hkh"/>
+                            <constraint firstItem="Aym-KZ-Hmh" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="COy-cC-y5n"/>
                             <constraint firstItem="S98-bD-i4M" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="GYr-TJ-qDX"/>
                             <constraint firstItem="Cb9-hz-Hfn" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="HBS-LL-hej"/>
                             <constraint firstItem="Cb9-hz-Hfn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="83" id="NOa-HN-SoW"/>
                             <constraint firstItem="S98-bD-i4M" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="bTx-Sq-udf"/>
                             <constraint firstItem="Cb9-hz-Hfn" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="169" id="hRJ-ag-Ahe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Aym-KZ-Hmh" secondAttribute="bottom" constant="26" id="lWF-JN-HzN"/>
                             <constraint firstItem="97E-y4-f0e" firstAttribute="top" secondItem="S98-bD-i4M" secondAttribute="bottom" constant="41" id="r8r-gi-W6O"/>
                         </constraints>
                     </view>
@@ -149,7 +163,45 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ae6-9g-Ius" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="O7I-ZF-M87" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1102.8985507246377" y="446.65178571428567"/>
+            <point key="canvasLocation" x="1103" y="121"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="LDj-Mc-REV">
+            <objects>
+                <viewController id="yk3-7s-gcF" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="UHY-RT-Y2f">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Вопросы в случайном порядке" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oAP-Nz-1qS">
+                                <rect key="frame" x="20" y="180" width="263" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fT4-My-36k">
+                                <rect key="frame" x="20" y="44" width="91" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Выход"/>
+                                <connections>
+                                    <segue destination="fB5-9S-x5D" kind="unwind" unwindAction="unwindSegue:" id="k3l-ym-bpW"/>
+                                </connections>
+                            </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-6F-xWN">
+                                <rect key="frame" x="345" y="190" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="aBb-0m-9SW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="wiA-yR-sIS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="fB5-9S-x5D" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="1102.8985507246377" y="783.48214285714278"/>
         </scene>
         <!--Game View Controller-->
         <scene sceneID="Gtf-uo-lIO">
@@ -170,13 +222,13 @@
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="o1c-fO-0Nk"/>
-                        <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Pyc-I8-c8A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="4sh-Iy-gWh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1102.8985507246377" y="-281.25"/>
+            <point key="canvasLocation" x="1103" y="-528"/>
         </scene>
     </scenes>
     <resources>

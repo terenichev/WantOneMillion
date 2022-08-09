@@ -41,5 +41,6 @@ class Game {
 class GameSession {
     var numberOfQuestions: Int = 0
     var answeredQuestions: Int = 0
+    var isRandomQuestions: Bool = false
     var stage: Int = 0
 }

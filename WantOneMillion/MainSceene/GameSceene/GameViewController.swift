@@ -9,6 +9,7 @@ import UIKit
 
 class GameViewController: UIViewController {
     var gameSession = GameSession()
+    var questions = questionsArray
     
     private lazy var questionLabel: UILabel = {
         let label = UILabel()
@@ -74,14 +75,17 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(gameSession.numberOfQuestions)
+        if Game.shared.isRandomQuestions {
+            questions.shuffle()
+            print(questions)
+        }
         
         if gameSession.stage <= 9 {
-            questionLabel.text = questionsArray[gameSession.stage].question
-            answerOneButton.setTitle(questionsArray[gameSession.stage].answerOne, for: .normal)
-            answerTwoButton.setTitle(questionsArray[gameSession.stage].answerTwo, for: .normal)
-            answerThreeButton.setTitle(questionsArray[gameSession.stage].answerThree, for: .normal)
-            answerFourButton.setTitle(questionsArray[gameSession.stage].answerFour, for: .normal)
+            questionLabel.text = questions[gameSession.stage].question
+            answerOneButton.setTitle(questions[gameSession.stage].answerOne, for: .normal)
+            answerTwoButton.setTitle(questions[gameSession.stage].answerTwo, for: .normal)
+            answerThreeButton.setTitle(questions[gameSession.stage].answerThree, for: .normal)
+            answerFourButton.setTitle(questions[gameSession.stage].answerFour, for: .normal)
             setupGameConstraints()
         } else {
             questionLabel.text = "Поздравляем! Вы - Миллионер!"
@@ -146,17 +150,16 @@ class GameViewController: UIViewController {
     }
 
     @objc func buttonOneAction() {
-        if answerOneButton.titleLabel?.text == questionsArray[self.gameSession.stage].righthAnswer {
+        if answerOneButton.titleLabel?.text == questions[self.gameSession.stage].righthAnswer {
             nextStage()
         } else {
             saveRecord()
             loseGame()
         }
-        print(Game.shared.isRandomQuestions)
     }
     
     @objc func buttonTwoAction() {
-        if answerTwoButton.titleLabel?.text == questionsArray[self.gameSession.stage].righthAnswer {
+        if answerTwoButton.titleLabel?.text == questions[self.gameSession.stage].righthAnswer {
             nextStage()
         } else {
             saveRecord()
@@ -165,7 +168,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func buttonThreeAction() {
-        if answerThreeButton.titleLabel?.text == questionsArray[self.gameSession.stage].righthAnswer {
+        if answerThreeButton.titleLabel?.text == questions[self.gameSession.stage].righthAnswer {
             nextStage()
         } else {
             saveRecord()
@@ -174,7 +177,7 @@ class GameViewController: UIViewController {
     }
     
     @objc func buttonFourAction() {
-        if answerFourButton.titleLabel?.text == questionsArray[self.gameSession.stage].righthAnswer {
+        if answerFourButton.titleLabel?.text == questions[self.gameSession.stage].righthAnswer {
             nextStage()
         } else {
             saveRecord()

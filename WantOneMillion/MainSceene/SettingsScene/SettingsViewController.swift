@@ -20,4 +20,8 @@ class SettingsViewController: UIViewController {
         Game.shared.isRandomQuestions.toggle()
     }
     
+    @IBAction func unwindSegue(_ sender: UIStoryboardSegue) {
+        
+    }
+    
 }

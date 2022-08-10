@@ -21,6 +21,7 @@
 		D3FC551B28A22D7400169EDE /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC551A28A22D7400169EDE /* RecordsCaretaker.swift */; };
 		D3FC552A28A3728100169EDE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC552928A3728100169EDE /* SettingsViewController.swift */; };
 		D3FC552D28A37EF100169EDE /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC552C28A37EF100169EDE /* AddQuestionViewController.swift */; };
+		D3FC552F28A42EFF00169EDE /* QuestionsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC552E28A42EFF00169EDE /* QuestionsCaretaker.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		D3FC551A28A22D7400169EDE /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		D3FC552928A3728100169EDE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		D3FC552C28A37EF100169EDE /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
+		D3FC552E28A42EFF00169EDE /* QuestionsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionsCaretaker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				D3FC5511289CDCC800169EDE /* Question.swift */,
 				D3FC5516289CDE5800169EDE /* QuestionsList.swift */,
+				D3FC552E28A42EFF00169EDE /* QuestionsCaretaker.swift */,
 			);
 			path = Questions;
 			sourceTree = "<group>";
@@ -226,6 +229,7 @@
 				D3FC552D28A37EF100169EDE /* AddQuestionViewController.swift in Sources */,
 				D3FC54FB289CD8EC00169EDE /* MainViewController.swift in Sources */,
 				D3FC54F7289CD8EC00169EDE /* AppDelegate.swift in Sources */,
+				D3FC552F28A42EFF00169EDE /* QuestionsCaretaker.swift in Sources */,
 				D3FC54F9289CD8EC00169EDE /* SceneDelegate.swift in Sources */,
 				D3FC5515289CDD5B00169EDE /* ResultsViewController.swift in Sources */,
 				D3FC551928A180D000169EDE /* GameSingleton.swift in Sources */,

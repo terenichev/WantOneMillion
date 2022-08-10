@@ -18,4 +18,4 @@ let eighthQuestion = Question(question: "Какие семьи, по мнени�
 let ninthQuestion = Question(question: "Что в дореволюционной России означала поговорка 'Идти под ёлку'?", answerOne: "Идти за дровами", answerTwo: "Собирать грибы", answerThree: "Идти в кабак", answerFour: "Изменить жене", righthAnswer: "Идти в кабак")
 let tenthQuestion = Question(question: "Изучение соединений какого элемента является основой органической химии?", answerOne: "Водород", answerTwo: "Кислород", answerThree: "Углерод", answerFour: "Кремний", righthAnswer: "Углерод")
 
-let questionsArray = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion]
+var questionsArray = [firstQuestion, secondQuestion, thirdQuestion, fourthQuestion, fifthQuestion, sixthQuestion, seventhQuestion, eighthQuestion, ninthQuestion, tenthQuestion]

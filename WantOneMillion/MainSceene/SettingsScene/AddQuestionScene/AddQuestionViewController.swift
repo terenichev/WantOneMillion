@@ -15,6 +15,7 @@ class AddQuestionViewController: UIViewController {
     @IBOutlet weak var thirdAnswerTextField: UITextField!
     @IBOutlet weak var fourthAnswerTextField: UITextField!
     
+    @IBOutlet weak var rightAnswerTextField: UITextField!
     @IBOutlet weak var saveQuestionButton: UIButton!
     
     override func viewDidLoad() {
@@ -32,7 +33,7 @@ class AddQuestionViewController: UIViewController {
             return
         }
         
-        guard firstAnswerTextField.text != "" && secondAnswerTextField.text != "" && thirdAnswerTextField.text != "" && fourthAnswerTextField.text != ""  else {
+        guard firstAnswerTextField.text != "" && secondAnswerTextField.text != "" && thirdAnswerTextField.text != "" && fourthAnswerTextField.text != "" && rightAnswerTextField.text != ""  else {
             let errorAnswerAlert = UIAlertController(title: "Ошибка", message: "Должны быть заполнены все поля с ответами", preferredStyle: .alert)
             let alertAction = UIAlertAction(title: "OK", style: .default)
             errorAnswerAlert.addAction(alertAction)
@@ -40,11 +41,13 @@ class AddQuestionViewController: UIViewController {
             return
         }
         
+        let newQestion = Question(question: questionTextField.text!, answerOne: firstAnswerTextField.text!, answerTwo: secondAnswerTextField.text!, answerThree: thirdAnswerTextField.text!, answerFour: fourthAnswerTextField.text!, righthAnswer: rightAnswerTextField.text!)
+        Game.shared.addCustomQuestion(newQestion)
+        
         let accessAlert = UIAlertController(title: nil, message: "Вопрос добавлен", preferredStyle: .alert)
         let alertAction = UIAlertAction(title: "OK", style: .default)
         accessAlert.addAction(alertAction)
         self.present(accessAlert, animated: true)
-        
     }
     
 }

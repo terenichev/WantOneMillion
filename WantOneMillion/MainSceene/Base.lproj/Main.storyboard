@@ -218,10 +218,10 @@
             </objects>
             <point key="canvasLocation" x="1102.8985507246377" y="783.48214285714278"/>
         </scene>
-        <!--View Controller-->
+        <!--Add Question View Controller-->
         <scene sceneID="Z5I-Ca-6bc">
             <objects>
-                <viewController id="qrr-xP-8qb" sceneMemberID="viewController">
+                <viewController id="qrr-xP-8qb" customClass="AddQuestionViewController" customModule="WantOneMillion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="b4g-lW-DKa">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -270,11 +270,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="filled" title="Добавить"/>
+                                <connections>
+                                    <action selector="saveQuestionAction:" destination="qrr-xP-8qb" eventType="touchUpInside" id="Dqn-Pf-UUS"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rJ6-Fo-QK6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="firstAnswerTextField" destination="ksy-Gb-6Ot" id="JFD-2o-JcQ"/>
+                        <outlet property="fourthAnswerTextField" destination="Mcj-6B-03l" id="RVC-Ns-FXw"/>
+                        <outlet property="questionTextField" destination="gjH-g9-n34" id="daF-Wh-0iS"/>
+                        <outlet property="saveQuestionButton" destination="d9o-Bs-n6U" id="vab-ia-MJB"/>
+                        <outlet property="secondAnswerTextField" destination="bvK-ZR-bYN" id="ZoF-aK-tzA"/>
+                        <outlet property="thirdAnswerTextField" destination="XlM-ru-1ih" id="a2K-xj-Mbv"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nmn-ON-EKq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="qzr-5C-IOU" userLabel="Exit" sceneMemberID="exit"/>

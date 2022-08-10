@@ -20,6 +20,7 @@
 		D3FC551928A180D000169EDE /* GameSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC551828A180D000169EDE /* GameSingleton.swift */; };
 		D3FC551B28A22D7400169EDE /* RecordsCaretaker.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC551A28A22D7400169EDE /* RecordsCaretaker.swift */; };
 		D3FC552A28A3728100169EDE /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC552928A3728100169EDE /* SettingsViewController.swift */; };
+		D3FC552D28A37EF100169EDE /* AddQuestionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3FC552C28A37EF100169EDE /* AddQuestionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +39,7 @@
 		D3FC551828A180D000169EDE /* GameSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameSingleton.swift; sourceTree = "<group>"; };
 		D3FC551A28A22D7400169EDE /* RecordsCaretaker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordsCaretaker.swift; sourceTree = "<group>"; };
 		D3FC552928A3728100169EDE /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		D3FC552C28A37EF100169EDE /* AddQuestionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddQuestionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,9 +133,18 @@
 		D3FC551C28A2D8A100169EDE /* SettingsScene */ = {
 			isa = PBXGroup;
 			children = (
+				D3FC552B28A37ED200169EDE /* AddQuestionScene */,
 				D3FC552928A3728100169EDE /* SettingsViewController.swift */,
 			);
 			path = SettingsScene;
+			sourceTree = "<group>";
+		};
+		D3FC552B28A37ED200169EDE /* AddQuestionScene */ = {
+			isa = PBXGroup;
+			children = (
+				D3FC552C28A37EF100169EDE /* AddQuestionViewController.swift */,
+			);
+			path = AddQuestionScene;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -212,6 +223,7 @@
 				D3FC5517289CDE5800169EDE /* QuestionsList.swift in Sources */,
 				D3FC552A28A3728100169EDE /* SettingsViewController.swift in Sources */,
 				D3FC550F289CDC8400169EDE /* GameViewController.swift in Sources */,
+				D3FC552D28A37EF100169EDE /* AddQuestionViewController.swift in Sources */,
 				D3FC54FB289CD8EC00169EDE /* MainViewController.swift in Sources */,
 				D3FC54F7289CD8EC00169EDE /* AppDelegate.swift in Sources */,
 				D3FC54F9289CD8EC00169EDE /* SceneDelegate.swift in Sources */,

@@ -152,6 +152,7 @@ class GameViewController: UIViewController {
             saveRecord()
             loseGame()
         }
+        print(Game.shared.isRandomQuestions)
     }
     
     @objc func buttonTwoAction() {

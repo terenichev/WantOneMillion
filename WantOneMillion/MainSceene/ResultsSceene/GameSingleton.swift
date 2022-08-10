@@ -24,6 +24,7 @@ class Game {
         }
     }
     private(set) var session: GameSession?
+    var isRandomQuestions: Bool = false
     
     private init() {
         self.records = self.recordsCaretaker.retrieveRecords()
@@ -36,11 +37,11 @@ class Game {
     func clearRecords() {
         self.records = []
     }
+    
 }
 
 class GameSession {
     var numberOfQuestions: Int = 0
     var answeredQuestions: Int = 0
-    var isRandomQuestions: Bool = false
     var stage: Int = 0
 }

@@ -165,10 +165,10 @@
             </objects>
             <point key="canvasLocation" x="1103" y="121"/>
         </scene>
-        <!--View Controller-->
+        <!--Settings View Controller-->
         <scene sceneID="LDj-Mc-REV">
             <objects>
-                <viewController id="yk3-7s-gcF" sceneMemberID="viewController">
+                <viewController id="yk3-7s-gcF" customClass="SettingsViewController" customModule="WantOneMillion" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="UHY-RT-Y2f">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,11 +192,17 @@
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="j8I-6F-xWN">
                                 <rect key="frame" x="345" y="190" width="49" height="31"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="randomSwitchAction:" destination="yk3-7s-gcF" eventType="valueChanged" id="cXU-dZ-0HU"/>
+                                </connections>
                             </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aBb-0m-9SW"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <connections>
+                        <outlet property="randomQuestionsSwitch" destination="j8I-6F-xWN" id="KOi-8C-FKg"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wiA-yR-sIS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <exit id="fB5-9S-x5D" userLabel="Exit" sceneMemberID="exit"/>

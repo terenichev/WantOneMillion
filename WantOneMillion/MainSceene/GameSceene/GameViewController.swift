@@ -21,6 +21,16 @@ class GameViewController: UIViewController {
         return label
     }()
     
+    private lazy var progressLabel: UILabel = {
+        let label = UILabel()
+        label.textColor = .black
+        label.text = "1 из 10"
+        label.numberOfLines = 1
+        label.textAlignment = .center
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
     private lazy var answerOneButton: UIButton = {
         let button = UIButton()
         button.backgroundColor = .blue
@@ -82,6 +92,7 @@ class GameViewController: UIViewController {
         
         if gameSession.stage <= 9 {
             questionLabel.text = questions[gameSession.stage].question
+            progressLabel.text = "Вопрос \(gameSession.stage + 1) из \(questions.count)"
             answerOneButton.setTitle(questions[gameSession.stage].answerOne, for: .normal)
             answerTwoButton.setTitle(questions[gameSession.stage].answerTwo, for: .normal)
             answerThreeButton.setTitle(questions[gameSession.stage].answerThree, for: .normal)
@@ -109,18 +120,23 @@ class GameViewController: UIViewController {
             questionLabel.rightAnchor.constraint(equalTo: self.view.rightAnchor, constant: -10),
             questionLabel.leftAnchor.constraint(equalTo: self.view.leftAnchor, constant: 10),
             ])
-        
     }
     
     func setupGameConstraints() {
         
         self.view.addSubview(questionLabel)
+        self.view.addSubview(progressLabel)
         self.view.addSubview(answerOneButton)
         self.view.addSubview(answerTwoButton)
         self.view.addSubview(answerThreeButton)
         self.view.addSubview(answerFourButton)
         
         NSLayoutConstraint.activate([
+            progressLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor),
+            progressLabel.topAnchor.constraint(equalTo: self.view.topAnchor, constant: 100),
+            progressLabel.heightAnchor.constraint(equalToConstant: 100),
+            progressLabel.widthAnchor.constraint(equalToConstant: 200),
+            
             questionLabel.centerXAnchor.constraint(equalTo: self.view.centerXAnchor, constant: 0),
             questionLabel.centerYAnchor.constraint(equalTo: self.view.centerYAnchor, constant: 10),
 //            questionLabel.heightAnchor.constraint(equalToConstant: 100),
